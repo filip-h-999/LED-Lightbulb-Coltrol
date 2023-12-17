@@ -27,6 +27,8 @@ h1 {
 }
 
 .main {
+	padding: 20px;
+	border-radius: 10px;
 	grid-area: main;
     display: flex;
     flex-direction: column;
@@ -36,11 +38,18 @@ h1 {
 }
 
 .main2 {
+	padding: 30px;
 	grid-area: main2;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+.btns{
+	border: 2px solid #fff;
+	border-radius: 10px;
+	padding: 10px;
 }
 
 .container {
@@ -58,26 +67,41 @@ h1 {
     margin: 4px 6px;
     cursor: pointer;
     &:hover {
-        filter: brightness(80%);
-        transform: scale(0.96);
+        /* filter: brightness(80%); */
+        transform: scale(0.90);
         transition: 0.3s;
     }
 }
 
+.btn:active {
+	transform: scale(0.80);
+	transition: 0.1s;
+	box-shadow: 2px 2px 5px white;
+  }
+
+.darken {
+    filter: brightness(50%);
+    transition: 0.3s;
+}
+
 #sun {
     font-size: 32px;
+	box-shadow: 2px 2px 5px white;
 }
 
 #moon {
     font-size: 32px;
+	box-shadow: 2px 2px 5px white;
 }
 
 #up {
     font-size: 32px;
+	box-shadow: 2px 2px 5px white;
 }
 
 #down {
     font-size: 32px;
+	box-shadow: 2px 2px 5px white;
 }
 
 #red {
