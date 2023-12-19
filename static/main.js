@@ -2,7 +2,19 @@ const socket = new WebSocket("ws://" + location.host + "/color");
 
 document.addEventListener("DOMContentLoaded", function () {
 	let buttons = document.querySelectorAll(".btn");
+    let switch_on_off = document.querySelector(".switch");
+    let click = 0;
 
+    switch_on_off.addEventListener("click", function () {
+        if (click % 2 == 0) {
+            socket.send("on");
+        }
+        else {
+            socket.send("off");
+        }
+        click += 1;
+    });
+    
 	buttons.forEach((button) => {
 		if (!window.matchMedia("only screen and (max-width: 760px)").matches) {
 			button.addEventListener("mouseover", function () {
