@@ -1,3 +1,5 @@
+const socket = new WebSocket("ws://" + location.host + "/color");
+
 document.addEventListener("DOMContentLoaded", function () {
 	let buttons = document.querySelectorAll(".btn");
 
@@ -16,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		button.addEventListener("click", function () {
 			let audio = new Audio("/static/audio/click.mp3");
 			audio.play();
+
+            socket.send(button.id);
 		});
 	});
 });
