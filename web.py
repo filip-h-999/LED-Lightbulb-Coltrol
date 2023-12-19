@@ -9,13 +9,21 @@ sock = Sock(app)
 def index():
     return render_template("index.html")
 
-@sock.route("/color")
-def color(ws):
-    while True:
-        color = ws.receive()
-        # print(color)
-        # ws.send(color)
-        subprocess.run(["python", "irrp.py","-p", "-g4", "-f", "diall_codes.json", color])
+# websocket example
+# @sock.route("/color")
+# def color(ws):
+#     while True:
+#         color = ws.receive()
+#         # print(color)
+#         # ws.send(color)
+#         subprocess.run(["python", "irrp.py","-p", "-g4", "-f", "diall_codes.json", color])
+
+# http example
+@app.route("/color/<color>", methods=['GET'])
+def color(color):
+    subprocess.run(["python", "irrp.py","-p", "-g4", "-f", "diall_codes.json", color])
+    print(color)
+    return 'OK', 200
 
 
 if __name__ == '__main__':

@@ -15,34 +15,34 @@
       <div class="main">
         <div class="btns">
           <div class="container">
-              <button class="btn" id="up">⬆️</button>
-              <button class="btn" id="down">⬇️</button>
-              <button class="btn" id="moon">🌑</button>
+              <button class="btn" id="up" onclick="sendColor('up')">⬆️</button>
+              <button class="btn" id="down" onclick="sendColor('down')">⬇️</button>
+              <button class="btn" id="moon" onclick="sendColor('moon')">🌑</button>
           </div>
           <div class="container">
-              <button class="btn" id="red">R</button>
-              <button class="btn" id="green">G</button>
-              <button class="btn" id="blue1">B</button>
+              <button class="btn" id="red" onclick="sendColor('red')">R</button>
+              <button class="btn" id="green" onclick="sendColor('green')">G</button>
+              <button class="btn" id="blue1" onclick="sendColor('blue1')">B</button>
           </div>
           <div class="container">
-              <button class="btn" id="orange1"></button>
-              <button class="btn" id="blue4"></button>
-              <button class="btn" id="blue2"></button>
+              <button class="btn" id="orange1" onclick="sendColor('orange1')"></button>
+              <button class="btn" id="blue4" onclick="sendColor('blue4')"></button>
+              <button class="btn" id="blue2" onclick="sendColor('blue2')"></button>
           </div>
           <div class="container">
-              <button class="btn" id="orange2"></button>
-              <button class="btn" id="purple"></button>
-              <button class="btn" id="blue3"></button>
+              <button class="btn" id="orange2" onclick="sendColor('orange2')"></button>
+              <button class="btn" id="purple" onclick="sendColor('purple')"></button>
+              <button class="btn" id="blue3" onclick="sendColor('blue3')"></button>
           </div>
           <div class="container">
-              <button class="btn" id="yellow"></button>
-              <button class="btn" id="pink"></button>
-              <button class="btn" id="sun">☀️</button>
+              <button class="btn" id="yellow" onclick="sendColor('yellow')"></button>
+              <button class="btn" id="pink" onclick="sendColor('pink')"></button>
+              <button class="btn" id="sun" onclick="sendColor('sun')">☀️</button>
           </div>
         </div>
       </div>
       <div class="main2">
-          <input class="switch" type="checkbox" id="switch">
+          <input class="switch" type="checkbox" id="switch" onchange="toggleSwitch(this)">
       </div>
       <div class="footer"></div>
     </div>
