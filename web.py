@@ -13,7 +13,7 @@ def index():
 def color(ws):
     while True:
         color = ws.receive()
-        print(color)
+        # print(color)
         # ws.send(color)
         subprocess.run(["python", "irrp.py","-p", "-g4", "-f", "diall_codes.json", color])
 
