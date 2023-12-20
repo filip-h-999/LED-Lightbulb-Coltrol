@@ -22,7 +22,7 @@ def index():
 @app.route("/color/<color>", methods=['GET'])
 def color(color):
     subprocess.run(["python", "irrp.py","-p", "-g4", "-f", "diall_codes.json", color])
-    print(color)
+    # print(color)
     return 'OK', 200
 
 
